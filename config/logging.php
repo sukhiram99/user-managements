@@ -112,6 +112,13 @@ return [
             'replace_placeholders' => true,
         ],
 
+        'user_management' => [
+            'driver' => 'single',
+            'path'   => storage_path('logs/user_management/user-management.log'),
+            'level' => 'info',
+             'days' => 15,
+        ],
+
         'errorlog' => [
             'driver' => 'errorlog',
             'level' => env('LOG_LEVEL', 'debug'),
